@@ -1,5 +1,5 @@
 {
-  "name": "vite-vercel",
+  "name": "@cycraft/vite-vercel",
   "version": "0.1.15",
   "description": "Adding Vercel middleware support to your Vite project",
   "publishConfig": {
@@ -20,7 +20,7 @@
       "import": "./dist/server.mjs"
     }
   },
-  "repository": "github:egoist-labs/vite-vercel",
+  "repository": "github:cycraft/vite-vercel",
   "scripts": {
     "build-fast": "tsup --shims",
     "build": "pnpm run build-fast -- --dts-resolve",

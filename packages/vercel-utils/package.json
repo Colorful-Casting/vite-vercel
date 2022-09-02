@@ -1,5 +1,5 @@
 {
-  "name": "vercel-utils",
+  "name": "@cycraft/vercel-utils",
   "version": "0.1.15",
   "description": "Some utils to work with vercel edge function and serverless function",
   "scripts": {
@@ -11,7 +11,7 @@
     "dist",
     "/*.d.ts"
   ],
-  "repository": "github:egoist-labs/vite-vercel",
+  "repository": "github:cycraft/vite-vercel",
   "exports": {
     "./server": {
       "import": "./dist/server.mjs",
