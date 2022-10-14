@@ -3,6 +3,7 @@ import { type Plugin, build } from "vite"
 import fs from "fs-extra"
 import resolveFrom from "resolve-from"
 import { fileURLToPath } from "url"
+import { getTransformedRoutes } from "@vercel/routing-utils"
 
 export type Options = {
   middleware?: string
@@ -139,8 +140,10 @@ export const plugin = (options: Options = {}): Plugin => {
           entrypoint: "index.js",
         })
       }
-
-      writeJson(".vercel/output/config.json", {
+      const { routes } = getTransformedRoutes({
+        redirects: [{ source: "/(.*)", destination: "/index.html" }],
+      })
+      const dataConfigJson = {
         version: 3,
         routes: [
           {
@@ -157,9 +160,11 @@ export const plugin = (options: Options = {}): Plugin => {
             middlewarePath: "main",
             continue: true,
           },
-          { src: "/(.*)", dest: "/index.html" },
+          // { src: "/(.*)", dest: "/index.html" },
+          ...(routes || []),
         ].filter(Boolean),
-      })
+      }
+      writeJson(".vercel/output/config.json", dataConfigJson)
     },
   }
 }
