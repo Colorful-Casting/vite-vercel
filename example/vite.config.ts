@@ -1,5 +1,5 @@
 import { defineConfig } from "vite"
-import vercel from "vite-vercel"
+import vercel from "@cycraft/vite-vercel"
 
 export default defineConfig({
   plugins: [

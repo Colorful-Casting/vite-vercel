@@ -7,6 +7,6 @@
   },
   "devDependencies": {
     "vite": "2.9.7",
-    "vite-vercel": "workspace:*"
+    "@cycraft/vite-vercel": "workspace:*"
   }
 }

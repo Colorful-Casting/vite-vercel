@@ -1,1 +1,1 @@
-import "vercel-utils/polyfills"
+import "@cycraft/vercel-utils/polyfills"

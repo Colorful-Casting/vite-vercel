@@ -2,4 +2,4 @@ export {
   MiddlewareFetchEvent,
   MiddlewareRequest,
   MiddlewareResponse,
-} from "vercel-utils/server"
+} from "@cycraft/vercel-utils/server"
