@@ -149,7 +149,7 @@ export const plugin = (options: Options = {}): Plugin => {
           {
             src: `/assets/(.+)`,
             headers: {
-              "cache-control": "public, immutable, max-age=31536000",
+              "Cache-Control": "public, immutable, max-age=31536000",
             },
           },
           {
