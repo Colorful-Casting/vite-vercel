@@ -140,7 +140,7 @@ export const plugin = (options: Options = {}): Plugin => {
         version: 3,
         routes: [
           {
-            src: `/assets/.+`,
+            src: `/assets/(.+)`,
             headers: {
               "cache-control": "public, immutable, max-age=31536000",
             },
@@ -149,11 +149,11 @@ export const plugin = (options: Options = {}): Plugin => {
             handle: "filesystem",
           },
           middlewarePath && {
-            src: "/.*",
+            src: "/(.*)",
             middlewarePath: "main",
             continue: true,
           },
-          { src: "/.*", dest: "/index.html" },
+          { src: "/(.*)", dest: "/index.html" },
         ].filter(Boolean),
       })
     },
