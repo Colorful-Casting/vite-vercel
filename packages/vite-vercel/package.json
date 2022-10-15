@@ -1,6 +1,6 @@
 {
   "name": "@cycraft/vite-vercel",
-  "version": "0.1.16-fork.4",
+  "version": "0.1.16-fork.5",
   "description": "Adding Vercel middleware support to your Vite project",
   "publishConfig": {
     "access": "public"
