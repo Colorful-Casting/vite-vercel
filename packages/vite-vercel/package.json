@@ -45,6 +45,6 @@
     "resolve-from": "^5.0.0"
   },
   "peerDependencies": {
-    "vite": "^3"
+    "vite": "^3 || ^4"
   }
 }
