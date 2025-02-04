@@ -1,6 +1,6 @@
 {
   "name": "@colorfulcast/vercel-utils",
-  "version": "0.2.0-fork.2",
+  "version": "0.2.0",
   "description": "Some utils to work with vercel edge function and serverless function",
   "scripts": {
     "prepublishOnly": "pnpm build",
