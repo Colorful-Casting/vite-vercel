@@ -1,6 +1,6 @@
 {
   "name": "@colorfulcast/vite-vercel",
-  "version": "0.2.0",
+  "version": "0.3.0",
   "description": "Adding Vercel middleware support to your Vite project",
   "publishConfig": {
     "access": "public"
