@@ -1,5 +1,5 @@
 {
-  "name": "@cycraft/vite-vercel",
+  "name": "@colorfulcast/vite-vercel",
   "version": "0.2.0-fork.2",
   "description": "Adding Vercel middleware support to your Vite project",
   "publishConfig": {
@@ -20,7 +20,7 @@
       "import": "./dist/server.mjs"
     }
   },
-  "repository": "github:cycraft/vite-vercel",
+  "repository": "github:colorfulcast/vite-vercel",
   "scripts": {
     "build-fast": "tsup --shims",
     "build": "pnpm run build-fast -- --dts-resolve",
@@ -40,7 +40,7 @@
     "vitest": "0.22.1"
   },
   "dependencies": {
-    "@cycraft/vercel-utils": "workspace:*",
+    "@colorfulcast/vercel-utils": "workspace:*",
     "fs-extra": "^10.1.0",
     "resolve-from": "^5.0.0"
   },

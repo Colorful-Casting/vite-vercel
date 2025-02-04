@@ -7,6 +7,6 @@
   },
   "devDependencies": {
     "vite": "3.1.8",
-    "@cycraft/vite-vercel": "workspace:*"
+    "@colorfulcast/vite-vercel": "workspace:*"
   }
 }

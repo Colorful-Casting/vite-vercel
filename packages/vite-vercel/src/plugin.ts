@@ -38,12 +38,12 @@ export const plugin = (options: Options = {}): Plugin => {
           // at /node_modules/.pnpm/fetch-blob@3.1.5/node_modules/fetch-blob/streams.cjs:16:17
           external: ["node-fetch", "@web-std/file"],
           // No sure why sometimes this is externalized
-          noExternal: [/vite-vercel/, /@cycraft\/vite-vercel/],
+          noExternal: [/vite-vercel/, /@colorfulcast\/vite-vercel/],
         },
         resolve: {
           alias: {
-            "@cycraft/vercel-utils": path.dirname(
-              resolve("@cycraft/vercel-utils/polyfills"),
+            "@colorfulcast/vercel-utils": path.dirname(
+              resolve("@colorfulcast/vercel-utils/polyfills"),
             ),
           },
         },
@@ -59,15 +59,15 @@ export const plugin = (options: Options = {}): Plugin => {
       if (!middlewarePath || process.env.VITE_VERCEL_BUILD) return
 
       let serverNode:
-        | typeof import("@cycraft/vercel-utils/server-node")
+        | typeof import("@colorfulcast/vercel-utils/server-node")
         | undefined
 
       server.middlewares.use(async (req, res, next) => {
         if (serverNode) return next()
 
-        await server.ssrLoadModule("@cycraft/vercel-utils/polyfills")
+        await server.ssrLoadModule("@colorfulcast/vercel-utils/polyfills")
         serverNode = (await server.ssrLoadModule(
-          "@cycraft/vercel-utils/server-node",
+          "@colorfulcast/vercel-utils/server-node",
         )) as any
         next()
       })

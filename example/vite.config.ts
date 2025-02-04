@@ -1,5 +1,5 @@
 import { defineConfig } from "vite"
-import vercel from "@cycraft/vite-vercel"
+import vercel from "@colorfulcast/vite-vercel"
 
 export default defineConfig({
   plugins: [

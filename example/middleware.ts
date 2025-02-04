@@ -2,7 +2,7 @@ import {
   MiddlewareRequest,
   MiddlewareResponse,
   MiddlewareFetchEvent,
-} from "@cycraft/vite-vercel/server"
+} from "@colorfulcast/vite-vercel/server"
 
 export default (req: MiddlewareRequest, event: MiddlewareFetchEvent) => {
   const url = new URL(req.url)
